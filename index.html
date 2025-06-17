@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKU Lab Inc.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Interフォントのインポート */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden; /* 横スクロールを防ぐ */
+        }
+
+        /* ヒーローセクションの動画背景 */
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* ビューポートの高さの80% */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%) scale(1.6);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .hero-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* 黒の半透明オーバーレイ */
+            z-index: 0;
+        }
+        .hero-content {
+            z-index: 1;
+            color: white;
+            text-align: center;
+            position: relative; /* オーバーレイの上に表示させるため */
+        }
+
+        /* スライドショーのスタイル */
+        .slideshow-container {
+            max-width: 900px; /* スライドショーの最大幅 */
+            position: relative;
+            margin: auto;
+            border-radius: 1rem; /* 角丸 */
+            overflow: hidden; /* 画像の角丸に合わせてはみ出しを隠す */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 影 */
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem; /* 角丸 */
+        }
+        /* Prev/Next ボタン */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 8px 8px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5); /* 半透明の背景 */
+        }
+        .next {
+            right: 0;
+            border-radius: 8px 0 0 8px;
+        }
+        .prev {
+            left: 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    <!-- ヘッダーセクション -->
+    <header class="bg-gray-900 text-white shadow-lg fixed w-full z-20 top-0">
+        <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+            <h1 class="text-3xl sm:text-4xl font-extrabold">
+                SAKU Lab Inc.
+            </h1>
+            <!-- Desktop Menu -->
+            <nav class="hidden sm:flex space-x-4 text-lg">
+                <a href="#home" class="hover:text-blue-400 transition duration-300">Home</a>
+                <a href="#services" class="hover:text-blue-400 transition duration-300">Services</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition duration-300">Portfolio</a>
+            </nav>
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="sm:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="menu" class="hidden sm:hidden">
+            <a href="#home" class="block text-center text-lg py-3 hover:bg-gray-700 transition duration-300">Home</a>
+            <a href="#services" class="block text-center text-lg py-3 hover:bg-gray-700 transition duration-300">Services</a>
+            <a href="#portfolio" class="block text-center text-lg py-3 hover:bg-gray-700 transition duration-300">Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- ヒーローセクション（動画背景） -->
+    <section id="home" class="hero-video-container">
+        <iframe
+            src="https://player.vimeo.com/video/1093506298?background=1&autoplay=1&loop=1&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-content">
+            <h2 class="font-raleway text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-4 animate-fade-in-up">
+               Closing the gap.
+            </h2>
+        </div>
+    </section>
+
+    <!-- サービス紹介セクション -->
+    <section id="services" class="py-16 sm:py-20 bg-white">
+      <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">私たちのサービス</h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
+              「こんなこと頼んでいいのかな？」というご相談から始まることがほとんどです。<br>
+              まずは、今の仕事のやり方をお聞かせください。
+          </p>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
+              あなたの業種、体制、得意・不得意に合わせて、続けられる方法をご提案します。<br>
+              よくあるテンプレートではなく、<br>
+              日々の業務に自然となじむ "あなた専用のやり方" を考えます。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- サービスカード1: システム開発 -->
+              <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="text-5xl text-blue-600 mb-4">💻</div>
+                  <h3 class="text-2xl font-semibold text-gray-900 mb-3">システム開発</h3>
+                  <p class="text-gray-700">
+                      お客様の業務に寄り添い、本当に必要な機能だけを厳選したオーダーメイドシステムを開発します。ITに詳しくなくても、安心してご相談ください。
+                  </p>
+              </div>
+              <!-- サービスカード2: AIソリューション -->
+              <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="text-5xl text-green-600 mb-4">🧠</div>
+                  <h3 class="text-2xl font-semibold text-gray-900 mb-3">AIソリューション</h3>
+                  <p class="text-gray-700">
+                      最新のAI技術を、あなたのビジネスに最適な形で導入支援します。複雑な専門知識は不要です。業務に自然と溶け込むAI活用をご提案します。
+                  </p>
+              </div>
+              <!-- サービスカード3: データ分析・活用 -->
+              <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                  <div class="text-5xl text-yellow-600 mb-4">📊</div>
+                  <h3 class="text-2xl font-semibold text-gray-900 mb-3">データ分析・活用</h3>
+                  <p class="text-gray-700">
+                    これまで見えていなかったデータを、自然に記録・取得できるよう整えます。
+                    収集から整理、活用まで、一貫してサポートします
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+        <!-- ポートフォリオ/事例セクション（画像スライドショー） -->
+        <section id="portfolio" class="py-16 sm:py-20 bg-gray-100">
+            <div class="px-4 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">導入事例</h2>
+                <div class="slideshow-container">
+                    <!-- スライド画像 -->
+                    <div class="mySlides fade">
+                        <img src="https://placehold.co/900x500/ADD8E6/ffffff?text=IT+Solution+Case+1" alt="導入事例1">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://placehold.co/900x500/90EE90/ffffff?text=AI+Project+Example" alt="導入事例2">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://placehold.co/900x500/FFD700/ffffff?text=Robotics+Integration" alt="導入事例3">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://placehold.co/900x500/FFA07A/ffffff?text=Cloud+Migration+Success" alt="導入事例4">
+                    </div>
+
+                    <!-- Prev/Next ボタン -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- フッターセクション -->
+    <footer class="bg-gray-900 text-white p-6 sm:p-8 mt-12 rounded-t-xl">
+        <div class="container mx-auto text-center text-sm sm:text-base">
+            <p>&copy; <span id="current-year"></span> 株式会社SAKUラボ All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            const heroSection = document.getElementById('home');
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+
+            function updateHeroMargin() {
+                if (header && heroSection) {
+                    heroSection.style.marginTop = `${header.offsetHeight}px`;
+                }
+            }
+
+            // Hamburger Menu Logic
+            if (menuBtn && menu) {
+                menuBtn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    // Wait for next paint before calculating height
+                    requestAnimationFrame(updateHeroMargin);
+                });
+            }
+
+            // Close menu when a link is clicked
+            const menuLinks = document.querySelectorAll('#menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (menu) {
+                        menu.classList.add('hidden');
+                        requestAnimationFrame(updateHeroMargin);
+                    }
+                });
+            });
+
+            // Update margin on resize to handle view changes
+            window.addEventListener('resize', updateHeroMargin);
+
+            // Initial margin setup
+            updateHeroMargin();
+
+            // 現在の年をフッターに表示
+            const currentYearElement = document.getElementById('current-year');
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+
+            // スライドショーのJavaScript
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // スライドショーのグローバルスコープ関数
+            window.plusSlides = function(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                if (!slides.length) return;
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
