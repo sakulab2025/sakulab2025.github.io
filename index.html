@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAKU Lab Inc.</title>
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -120,7 +122,7 @@
 <body class="bg-gray-200">
   <!-- ヘッダーセクション -->
   <header class="bg-gray-900 text-white shadow-lg fixed w-full z-20 top-0">
-    <div class="flex justify-between items-center p-4 sm:p-6">
+    <div id="main-header" class="flex justify-between items-center p-4 sm:p-6">
       <h1 class="text-3xl sm:text-4xl font-extrabold sm:font-bold">
         SAKU Lab Inc.
       </h1>
@@ -132,7 +134,8 @@
       </nav>
       <!-- Hamburger Button -->
       <button id="menu-btn" class="sm:hidden focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
     </div>
     <!-- Mobile Menu -->
@@ -154,7 +157,7 @@
     <div class="hero-video-overlay"></div>
     <div class="hero-content">
       <h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-4 animate-fade-in-up">
-         Closing the gap.
+        Closing the gap.
       </h2>
     </div>
   </section>
@@ -239,14 +242,16 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const header = document.querySelector('header');
+      const mainHeader = document.getElementById('main-header');
       const heroSection = document.getElementById('home');
       const menuBtn = document.getElementById('menu-btn');
       const menu = document.getElementById('menu');
+      const menuOpenIcon = document.getElementById('menu-open-icon');
+      const menuCloseIcon = document.getElementById('menu-close-icon');
 
       function updateHeroMargin() {
-        if (header && heroSection) {
-          heroSection.style.marginTop = `${header.offsetHeight}px`;
+        if (mainHeader && heroSection) {
+          heroSection.style.marginTop = `${mainHeader.offsetHeight}px`;
         }
       }
 
@@ -254,8 +259,11 @@
       if (menuBtn && menu) {
         menuBtn.addEventListener('click', () => {
           menu.classList.toggle('hidden');
-          // Wait for next paint before calculating height
-          requestAnimationFrame(updateHeroMargin);
+          const isMenuVisible = !menu.classList.contains('hidden');
+          if (menuOpenIcon && menuCloseIcon) {
+            menuOpenIcon.classList.toggle('hidden', isMenuVisible);
+            menuCloseIcon.classList.toggle('hidden', !isMenuVisible);
+          }
         });
       }
 
@@ -263,9 +271,12 @@
       const menuLinks = document.querySelectorAll('#menu a');
       menuLinks.forEach(link => {
         link.addEventListener('click', () => {
-          if (menu) {
+          if (menu && !menu.classList.contains('hidden')) {
             menu.classList.add('hidden');
-            requestAnimationFrame(updateHeroMargin);
+            if (menuOpenIcon && menuCloseIcon) {
+              menuOpenIcon.classList.remove('hidden');
+              menuCloseIcon.classList.add('hidden');
+            }
           }
         });
       });
