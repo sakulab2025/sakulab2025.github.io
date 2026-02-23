@@ -49,11 +49,15 @@ document.addEventListener('DOMContentLoaded', function () {
     currentYearElement.textContent = new Date().getFullYear();
   }
 
-  // Contact form → Google Forms (GET via hidden iframe)
+  // Contact form → Google Forms (GET via hidden iframe) with reCAPTCHA v2 Checkbox
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (typeof grecaptcha !== 'undefined' && !grecaptcha.getResponse()) {
+        alert('「私はロボットではありません」にチェックを入れてください。');
+        return;
+      }
       var base = 'https://docs.google.com/forms/d/e/1FAIpQLSezr1NsLyxJY_ZQ9o2mF6cBreOw6uGCPSnjMxGwN2057yT4lg/formResponse?';
       var params = new URLSearchParams();
       new FormData(contactForm).forEach(function (value, key) {
