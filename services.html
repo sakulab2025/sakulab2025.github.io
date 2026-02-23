@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サービス | 株式会社SAKUラボ</title>
+  <meta name="description" content="株式会社SAKUラボのサービス一覧。ITシステム開発・AI導入支援・データ分析を通じて、お客様の業務改善をサポートします。">
+  <meta property="og:title" content="サービス | 株式会社SAKUラボ">
+  <meta property="og:description" content="ITシステム開発・AI導入支援・データ分析を通じて、お客様の業務改善をサポートします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://labsaku.jp/services.html">
+  <meta property="og:image" content="https://labsaku.jp/logo.png">
+  <link rel="icon" type="image/svg+xml" href="./logo.svg">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4YNCTBJGV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X4YNCTBJGV');
+  </script>
+</head>
+<body class="bg-white">
+  <a href="#main-content" class="skip-nav">メインコンテンツへ</a>
+
+  <!-- ヘッダー -->
+  <header class="bg-white shadow-sm fixed w-full z-20 top-0 border-b border-orange-100">
+    <div id="main-header" class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+      <a href="./" class="flex items-center gap-3">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SAKU Lab logo">
+          <circle cx="58" cy="38" r="33" stroke="#292524" stroke-width="2.5" fill="none"/>
+          <circle cx="58" cy="38" r="25" fill="#FFDE59"/>
+          <circle cx="28" cy="72" r="18" stroke="#292524" stroke-width="2.5" fill="none"/>
+          <circle cx="28" cy="72" r="13" fill="#FF914D"/>
+        </svg>
+        <span class="text-2xl sm:text-3xl font-bold text-stone-900">SAKU Lab Inc.</span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-base">
+        <a href="./" class="text-stone-600 hover:text-amber-700 transition duration-300">Home</a>
+        <a href="./about.html" class="text-stone-600 hover:text-amber-700 transition duration-300">About</a>
+        <a href="./services.html" class="text-amber-700 font-medium transition duration-300">Services</a>
+        <a href="./contact.html" class="text-stone-600 hover:text-amber-700 transition duration-300">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none text-stone-900" aria-label="メニューを開く">
+        <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav id="menu" class="hidden md:hidden border-t border-orange-100 bg-white">
+      <a href="./" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">Home</a>
+      <a href="./about.html" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">About</a>
+      <a href="./services.html" class="block text-center text-lg py-3 text-amber-700 font-medium transition duration-300">Services</a>
+      <a href="./contact.html" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="pt-24 sm:pt-28">
+    <!-- イントロ -->
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+      <div class="container mx-auto px-4 max-w-3xl text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-8">サービス</h1>
+        <p class="text-lg text-stone-600 leading-relaxed">
+          「こんなこと頼んでいいのかな？」——そのお気持ちで大丈夫です。<br>
+          業務の課題をお聞かせいただければ、<br class="hidden sm:inline">最適な技術と進め方をご提案します。
+        </p>
+      </div>
+    </section>
+
+    <!-- システム開発 -->
+    <section id="system" class="py-16 sm:py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">システム開発</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">こんなお悩みに</h3>
+            <ul class="space-y-3 text-stone-600">
+              <li class="flex items-start gap-2"><span class="text-amber-500 mt-1">&#9654;</span>Excel やスプレッドシートでの管理が限界</li>
+              <li class="flex items-start gap-2"><span class="text-amber-500 mt-1">&#9654;</span>既存システムが古く、業務に合わなくなってきた</li>
+              <li class="flex items-start gap-2"><span class="text-amber-500 mt-1">&#9654;</span>業務フローがバラバラで情報共有ができていない</li>
+              <li class="flex items-start gap-2"><span class="text-amber-500 mt-1">&#9654;</span>IT会社に相談しても、専門用語ばかりで不安</li>
+            </ul>
+          </div>
+          <div class="bg-amber-50 border border-amber-200/60 rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">私たちの強み</h3>
+            <ul class="space-y-3 text-stone-600 text-sm">
+              <li>お客様の言葉で対話し、本当に必要な機能だけを厳選</li>
+              <li>小さく始めて、効果を確認しながら段階的に拡張</li>
+              <li>導入後のサポート・改善まで一貫して対応</li>
+              <li>Web アプリ、業務ツール、API連携など幅広く対応</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AIソリューション -->
+    <section id="ai" class="py-16 sm:py-20 bg-amber-50/50">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full bg-orange-400 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">AIソリューション</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">こんなお悩みに</h3>
+            <ul class="space-y-3 text-stone-600">
+              <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">&#9654;</span>AI に興味はあるが、何から始めればいいかわからない</li>
+              <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">&#9654;</span>定型作業に時間を取られて、本来の仕事に集中できない</li>
+              <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">&#9654;</span>問い合わせ対応や書類作成を効率化したい</li>
+              <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">&#9654;</span>AI ツールを導入したが、うまく活用できていない</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-orange-200/60 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">私たちの強み</h3>
+            <ul class="space-y-3 text-stone-600 text-sm">
+              <li>「AI は難しくない」を前提に、わかりやすくご説明</li>
+              <li>ChatGPT、画像認識、自然言語処理など最新技術を活用</li>
+              <li>業務に自然と溶け込む形でAIを組み込む設計</li>
+              <li>PoC（概念実証）で効果を確認してから本格導入</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- データ分析・活用 -->
+    <section id="data" class="py-16 sm:py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">データ分析・活用</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">こんなお悩みに</h3>
+            <ul class="space-y-3 text-stone-600">
+              <li class="flex items-start gap-2"><span class="text-yellow-500 mt-1">&#9654;</span>データはあるが、活用できていない</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-500 mt-1">&#9654;</span>経験と勘に頼った意思決定から脱却したい</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-500 mt-1">&#9654;</span>レポート作成に毎月何時間もかかっている</li>
+              <li class="flex items-start gap-2"><span class="text-yellow-500 mt-1">&#9654;</span>そもそもデータの記録・管理が整っていない</li>
+            </ul>
+          </div>
+          <div class="bg-yellow-50 border border-yellow-200/60 rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-stone-900 mb-4">私たちの強み</h3>
+            <ul class="space-y-3 text-stone-600 text-sm">
+              <li>データの整備（記録・収集・クレンジング）から対応</li>
+              <li>ダッシュボードで見える化、直感的に理解できる形に</li>
+              <li>分析結果を「次の行動」につなげるところまでサポート</li>
+              <li>既存のExcel やシステムからのデータ移行もお任せ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 進め方 -->
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-amber-50 to-orange-50">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-12 text-center">プロジェクトの進め方</h2>
+        <div class="space-y-8">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+            <div>
+              <h3 class="text-lg font-semibold text-stone-900 mb-1">ヒアリング</h3>
+              <p class="text-stone-600 text-sm">現在の業務フローや課題をじっくりお聞きします。専門用語は不要です。</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+            <div>
+              <h3 class="text-lg font-semibold text-stone-900 mb-1">ご提案</h3>
+              <p class="text-stone-600 text-sm">課題に対する解決策と、概算費用・スケジュールをご提示します。</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+            <div>
+              <h3 class="text-lg font-semibold text-stone-900 mb-1">開発・導入</h3>
+              <p class="text-stone-600 text-sm">小さく始めて、フィードバックをいただきながら段階的に進めます。</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold">4</div>
+            <div>
+              <h3 class="text-lg font-semibold text-stone-900 mb-1">運用・改善</h3>
+              <p class="text-stone-600 text-sm">導入後も継続的にサポート。使いながら改善を重ねます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-20 bg-white border-t border-amber-100">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">サービスについてご相談ください</h2>
+        <p class="text-stone-600 mb-8">料金やスケジュールなど、お気軽にお問い合わせください。</p>
+        <a href="./contact.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 shadow-lg shadow-amber-500/20">
+          無料相談・お問い合わせ
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-stone-800 text-stone-400">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="58" cy="38" r="33" stroke="white" stroke-width="2.5" fill="none"/><circle cx="58" cy="38" r="25" fill="#FFDE59"/><circle cx="28" cy="72" r="18" stroke="white" stroke-width="2.5" fill="none"/><circle cx="28" cy="72" r="13" fill="#FF914D"/></svg>
+            <span class="text-white font-bold text-lg">SAKU Lab Inc.</span>
+          </div>
+          <p class="text-sm leading-relaxed">ITと現場のあいだに、ちょうどいい橋を架ける。<br>株式会社SAKUラボ</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">サービス</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">システム開発</a></li>
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">AIソリューション</a></li>
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">データ分析・活用</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">会社情報</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./about.html" class="hover:text-amber-400 transition duration-300">会社概要</a></li>
+            <li><a href="./contact.html" class="hover:text-amber-400 transition duration-300">お問い合わせ</a></li>
+            <li><a href="./privacy.html" class="hover:text-amber-400 transition duration-300">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-stone-700/50 pt-6 text-center text-sm">
+        <p>&copy; <span id="current-year"></span> 株式会社SAKUラボ All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>

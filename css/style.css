@@ -1,0 +1,125 @@
+/* ========================================
+   SAKU Lab Inc. - Common Styles
+   Warm Cream Theme
+   ======================================== */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Skip Navigation */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: #F59E0B;
+  color: white;
+  font-weight: 600;
+}
+.skip-nav:focus {
+  top: 0;
+}
+
+/* Hero Section */
+.hero-video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1.6);
+  z-index: -1;
+  pointer-events: none;
+}
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+.hero-content {
+  z-index: 1;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.hero-content h2 {
+  font-family: 'Chiron Sung HK WS', serif;
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Slideshow Prev/Next Buttons */
+.slide-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(41, 37, 36, 0.7);
+  border: none;
+}
+.slide-btn.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.slide-btn.prev {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+.slide-btn:hover {
+  background-color: rgba(41, 37, 36, 0.9);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-video-container {
+    height: 40vh;
+  }
+}
+/* Smartphone */
+@media (max-width: 640px) {
+  .hero-video-container {
+    height: 30vh;
+  }
+}

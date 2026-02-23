@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 株式会社SAKUラボ</title>
+  <meta name="description" content="株式会社SAKUラボへのお問い合わせはこちら。ITシステム開発・AI導入支援・データ分析について、お気軽にご相談ください。">
+  <meta property="og:title" content="お問い合わせ | 株式会社SAKUラボ">
+  <meta property="og:description" content="ITシステム開発・AI導入支援・データ分析について、お気軽にご相談ください。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://labsaku.jp/contact.html">
+  <meta property="og:image" content="https://labsaku.jp/logo.png">
+  <link rel="icon" type="image/svg+xml" href="./logo.svg">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4YNCTBJGV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X4YNCTBJGV');
+  </script>
+</head>
+<body class="bg-white">
+  <a href="#main-content" class="skip-nav">メインコンテンツへ</a>
+
+  <!-- ヘッダー -->
+  <header class="bg-white shadow-sm fixed w-full z-20 top-0 border-b border-orange-100">
+    <div id="main-header" class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+      <a href="./" class="flex items-center gap-3">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SAKU Lab logo">
+          <circle cx="58" cy="38" r="33" stroke="#292524" stroke-width="2.5" fill="none"/>
+          <circle cx="58" cy="38" r="25" fill="#FFDE59"/>
+          <circle cx="28" cy="72" r="18" stroke="#292524" stroke-width="2.5" fill="none"/>
+          <circle cx="28" cy="72" r="13" fill="#FF914D"/>
+        </svg>
+        <span class="text-2xl sm:text-3xl font-bold text-stone-900">SAKU Lab Inc.</span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-base">
+        <a href="./" class="text-stone-600 hover:text-amber-700 transition duration-300">Home</a>
+        <a href="./about.html" class="text-stone-600 hover:text-amber-700 transition duration-300">About</a>
+        <a href="./services.html" class="text-stone-600 hover:text-amber-700 transition duration-300">Services</a>
+        <a href="./contact.html" class="text-amber-700 font-medium transition duration-300">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none text-stone-900" aria-label="メニューを開く">
+        <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <nav id="menu" class="hidden md:hidden border-t border-orange-100 bg-white">
+      <a href="./" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">Home</a>
+      <a href="./about.html" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">About</a>
+      <a href="./services.html" class="block text-center text-lg py-3 text-stone-600 hover:bg-amber-50 transition duration-300">Services</a>
+      <a href="./contact.html" class="block text-center text-lg py-3 text-amber-700 font-medium transition duration-300">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="pt-24 sm:pt-28">
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-amber-50 to-white">
+      <div class="container mx-auto px-4 max-w-2xl">
+        <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-4 text-center">お問い合わせ</h1>
+        <p class="text-lg text-stone-600 text-center mb-12">
+          どんな些細なことでもお気軽にご相談ください。<br>
+          通常2営業日以内にご返信いたします。
+        </p>
+
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-stone-700 text-sm font-medium mb-2">お名前 <span class="text-amber-500">*</span></label>
+            <input type="text" id="name" name="entry.729747717" required class="w-full bg-white border border-stone-300 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition duration-300" placeholder="山田 太郎">
+          </div>
+          <div>
+            <label for="email" class="block text-stone-700 text-sm font-medium mb-2">メールアドレス <span class="text-amber-500">*</span></label>
+            <input type="email" id="email" name="entry.1407693811" required class="w-full bg-white border border-stone-300 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition duration-300" placeholder="example@company.co.jp">
+          </div>
+          <div>
+            <label for="company" class="block text-stone-700 text-sm font-medium mb-2">会社名</label>
+            <input type="text" id="company" name="entry.47341111" class="w-full bg-white border border-stone-300 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition duration-300" placeholder="株式会社〇〇">
+          </div>
+          <div>
+            <label for="message" class="block text-stone-700 text-sm font-medium mb-2">お問い合わせ内容 <span class="text-amber-500">*</span></label>
+            <textarea id="message" name="entry.671191503" rows="5" required class="w-full bg-white border border-stone-300 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition duration-300" placeholder="ご相談内容をお書きください"></textarea>
+          </div>
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="privacy" required class="mt-1 w-4 h-4 accent-amber-500">
+            <label for="privacy" class="text-sm text-stone-600">
+              <a href="./privacy.html" class="text-amber-600 hover:text-amber-700 underline">プライバシーポリシー</a>に同意の上、送信します。
+            </label>
+          </div>
+          <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-lg text-lg transition duration-300 shadow-lg shadow-amber-500/20">
+            送信する
+          </button>
+        </form>
+        <div id="form-success" class="hidden text-center py-12">
+          <p class="text-2xl font-bold text-stone-900 mb-4">送信ありがとうございます</p>
+          <p class="text-stone-600">内容を確認のうえ、折り返しご連絡いたします。</p>
+        </div>
+        <iframe name="hidden-iframe" id="hidden-iframe" class="hidden"></iframe>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-stone-800 text-stone-400">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="58" cy="38" r="33" stroke="white" stroke-width="2.5" fill="none"/><circle cx="58" cy="38" r="25" fill="#FFDE59"/><circle cx="28" cy="72" r="18" stroke="white" stroke-width="2.5" fill="none"/><circle cx="28" cy="72" r="13" fill="#FF914D"/></svg>
+            <span class="text-white font-bold text-lg">SAKU Lab Inc.</span>
+          </div>
+          <p class="text-sm leading-relaxed">ITと現場のあいだに、ちょうどいい橋を架ける。<br>株式会社SAKUラボ</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">サービス</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">システム開発</a></li>
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">AIソリューション</a></li>
+            <li><a href="./services.html" class="hover:text-amber-400 transition duration-300">データ分析・活用</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">会社情報</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./about.html" class="hover:text-amber-400 transition duration-300">会社概要</a></li>
+            <li><a href="./contact.html" class="hover:text-amber-400 transition duration-300">お問い合わせ</a></li>
+            <li><a href="./privacy.html" class="hover:text-amber-400 transition duration-300">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-stone-700/50 pt-6 text-center text-sm">
+        <p>&copy; <span id="current-year"></span> 株式会社SAKUラボ All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
